@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>pseudo selector</title>
+    <style>
+        header li {
+            list-style: none;
+        }
+
+        a:link,
+        a:visited {
+            background-color: darkcyan;
+            color: black;
+            width: 220px;
+            margin-bottom: 2px;
+            display: block;
+            text-align: center;
+        }
+
+        a:hover,
+        a:active {
+            background-color: darkgoldenrod;
+        }
+
+        header li:nth-child(3) {
+            font-size: 40px;
+        }
+
+        section div:nth-child(odd) {
+            background-color: gray;
+        }
+
+        section div:nth-child(4):hover {
+            background-color: green;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>pseudo class selector</h1>
+    <header>
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#FB">FaceBook</a></li>
+            <li><a href="#news">NewsFeed</a></li>
+        </ul>
+    </header>
+    <section>
+        <div>DIV1</div>
+        <div>DIV2</div>
+        <div>DIV3</div>
+        <div>DIV4</div>
+        <div>DIV5</div>
+        <div>DIV1</div>
+        <div>DIV2</div>
+        <div>DIV3</div>
+        <div>DIV4</div>
+        <div>DIV5</div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+https://chaithra7204481255.github.io/courseraTest/
+https://github.com/jhu-ep-coursera/fullstack-course4  --- code base
+
+! + Enter = basic html template
+
+C:\learning\courseraTest>git commit -m "my first page"
+dir
+C:\learning\courseraTest>browser-sync start --server --directory --files "*"
+
+browser-sync start --server --directory --files "**/*"
+
+opens a browser with file directory in chrome
+
+jsfiddlelink - it generates new unique url for everycode we ryt and easy to share our problem , stack overflow , codepen.io
+
+
+resources:
+----------
+https://www.w3.org/TR/html52/
+
+https://caniuse.com/  - says what features are supported by wt all browser
+
+https://validator.w3.org/nu/#textarea - to validate the html code
+
+https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html
+
+http://www.csszengarden.com/221/  -- the best to fetch css
+
+FAQ:
+---
+https://github.com/jhu-ep-coursera/fullstack-course4/blob/master/FAQ.md
+https://github.com/jhu-ep-coursera/fullstack-course4/blob/master/FAQ.md#q-how-to-ask-and-get-your-question-answered-a-must-read
+
+*metatag is standalone tag hence no closing tag
+*elements are of 2 types: block-level elements(starts in new line) or inline elements
+* > in html &gt;   < in html is &lt;   & in html is &amp; &copy; is for copy rights &nbsp; - allows u not to break that element when the screen shrinks
+* .class + div {} - it takes the sibbling of that class
+*&quot; - is used for for quoting value and if values are safeguarded by non-modification.
+*FRAGMENT IDENTIFIERS HELPS NAVIGATION EASIER
+*element selector - element based
+*class selector, id selector - .class , #class
+*element with class selector - p.class , p,.class{} 
+*child selector - article > p {} : only direct child p tag under article element will have the styling - its true to both element selector and class selector
+*descendant selector - article [ {} : every p tag under article is affected- its true to both element selector and class selector
+*pseudo-class selector - selector:pseudo-class{} - active , hover, link , visited ,section div:nth-child(odd) 
+*inline-styling - least prefereed and used only for testing | external stylesheets - <link rel="stylesheet" href="cssfile.css"></link>
+*last declaration wins as its top to down approach, declaration merges if the class is declared twice with diffrent property
+*priority -> style="" , id,  class ;pseudo-class , # number of element
+*box model - padding - border- margin
+*border box in sizing model property is most commonly used
+*star selector *{all property here is applicable to every element} - also used to reset browser defaults settings.
+* margins when next to eachother i.e., left 40px and right 50px then overall it sums up to 90px margin in the centre 
+*margins when top and bottom of eachother i.e., top 40px and bottom 50px then larger margin wins in the centre and it will be 50px in center
+*float - to move elemts in the same line to given position, float element margin never collapse.
+section{clear : left,right or both} - jumps p tag to new line
+* mention width: 50% helps page shrink and expand
+*postive relative positioning holds both positive and negative value. value is count from top to down , from left to right
+*offsetting = mentioning top, right, bottom and left
+*media queries : each media feature resolves to true or false
+max-width 767 and min-width 922, orientation, screen, print
+*responsive design - layout adapts to size of all the devices , 12-column grid layout is utilized
+*<meta name="viewport" content="width=device-width, initial-scal=1"> - to explain app in phone to be responsive and not to zoom out by default
+viewport meta tag to turn off default mobile zooming , also help the media query to act according to its specification
+
+bootstrap:
+----------
+*container class , container fluid class - stretches to full width of the screen
+* .container -> .row -> .col (column= size md > 970px, lg 1200px, sm 768px, xs = span)
+
+module2- https://chaithra7204481255.github.io/UI-COURSERA/module-2%20solution/index.html
+https://github.com/chaithra7204481255/UI-COURSERA
+
+https://github.com/chaithra7204481255/module-3/tree/main
+desktop - 992px and above
+Tablet view - between 768px and 991px
+Mobile view - equal to or less than 767px
+
+
+web development client questionnaire -
+to understand the requirement
+
+placehold.it - used for image px managing
+*adding map- search location- embedd map and url
+
+JS:
+---
+*defining variable is dynamically typed.
+*when function is created we will have its own scope or lexical scope.
+*js code always run o its own execution context
+*function always searchs for the value within its scope. if not found then it searches the outer scope until the global scope.
+*type: 
+1. one object type : is collection of name value pair , either single or nested
+2. six primitive type : is a single immutable value (unchangeble)
+boolean, undefined - value is unset , never set a value to undefined, Null - lack of value, number - 64 bit floating type, string, symbol
+*js automatically converts primitive type if == is used, to make it strick compare ===
+*false, null, undefined, 0, "" , nan = leads to boolean false : anythingelse like 1, true, -1, "hello", "false" leads to boolean evaluation to true.
+functions:
+*these are first type datatype , they are regular objects which allows setting sm properties.
+*functions cud be passed as arguments too
+*primitive types are pass byvalue and object types are pass by reference
+*primitive types will have its own memory allocation for every variables declared
+*but when an object is copied to another variable then the reference will be pointing to same memory location (where the inside object properties are present) as the initial object created.
+ex: object A - has its own memory allocation - PROPERTY declared inside object A has its own memory allocation. - Hence both are referenced to property stored memory allocation
+    object B - object A is copied to B ,has its own memory allocation - PROPERTY declared inside object B has its own memory allocation. - Hence both are referenced to property stored memory allocation
+so when one object changes it reflects in other object too
+*pass by value - primitive and pass by reference - objects
+*this keyword points to global object
+*obj.prototype.varName = used to create a property which will be present only once in the memory and will not be added to the new obj created everytime
+*in nested function the value / parameter of the innermost functions will be set to the global object.
+
+closure:
+--------
+*function has its own execution context , outer reference to its lexical env , it has its own this keyword
+* a closure gives you access to an outer function’s scope from an inner function.
+* In JavaScript, closures are created every time a function is created
+immediately invoked function expression:
+-----------------------------------------
+(function b(name) {
+    console.log("hello "+ name);
+})( "yakov");
+*event listeners take up 2 args , event name and functionname
+*DomContentLoaded is used to handle the entire events.
+
+HTTP:
+------
+URN : UNIFORM RESOURCE NAME 
+URI : UNIFORM RESOURCE identifier
+get request : GET/URI string?Querystring(name-value pair) http/1.1(http version)
+URL: UNIFORM RESOURCE LOCATOR
+
+methods : 
+----------
+GET - retrieve src and data is passed as a part of uri
+post - sends data to server in order to be process / data is sent in the msg body
+post has some project headers and message body
+update & delete 
+
+response - http version: http/1.1 , status code:200 , response:ok,not found,forbidden etc
+
+AJAX: Async js and xml
+-----------------------
+ancient models : when a http request is made to server , it returns a new html page with the expected changes eventhough a small change is sufficient
+ajax : https request sent by js to server and server returns a piece of code to the same html page where a part of the view is only changes and hence it makes the process faster
+
+sync : execution of one prgrmmng instruction at a time
+async : execution is more than one at a time and also it has multi thread to work once
+
+*browser holds multiple things- event queue , js engine , html rendering , webGl used for graphic , http requestor is async 
+*making an ajax call the address of js function is sent to the http requstor and the response from server is handled by the call back function
+
+JSON:
+------
+light weighted , json is just a ray of strings
+CONVERT JSON STRING TO OBJECT var obj = JSON.parse(jsonstring)
+CONVERT OBJECT TO JSON STRING  var str = JSON.stringify(obj)
+
+www.ajaxload.info -> geneerate gifs
+
+
+
